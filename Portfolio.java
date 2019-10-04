@@ -41,7 +41,9 @@ public class Portfolio
         System.out.println("Press 4 for Logo drawing");
         System.out.println("Press 5 for Monkey Song");
         System.out.println("Press 6 for Question 2 about drawing Object");
-        try { 
+        System.out.println("Press 7 for Palindrome");
+        System.out.println("Press 8 for Jeopardy");
+        System.out.println("Press 9 for Knight lab");
             int answer = keyboard.nextInt();
             if(answer==1){
                 runner.DrawOutline();
@@ -67,12 +69,22 @@ public class Portfolio
             if (answer==6){
                 runner.Question();
             }
-
-        }
-       
-        catch (Exception InputMistmatchException) {
-            System.out.println("invalid input");
-        }
+            if (answer==7){
+                runner.palindrome();
+            }
+               
+            if (answer==8){
+                DrawLine temp = new DrawLine();
+                temp.YOLO();
+            }
+            if (answer==9){
+                Knight hi = new Knight();
+                hi.printTour();
+                
+                System.out.println("The code doesn't work in portfolio use seperatley to run program.");
+                
+            }
+        
         
         Scanner yolo = new Scanner (System.in);
         System.out.println("Type exit to exit");
@@ -129,7 +141,25 @@ public class Portfolio
       
     
     }
-    
+    public void palindrome()
+   {
+      String original, reverse = ""; // Objects of String class
+      Scanner in = new Scanner(System.in);
+     
+      System.out.println("Enter a string to check if it is a palindrome");
+      original = in.nextLine();
+     
+      int length = original.length();
+     
+      for (int i = length - 1; i >= 0; i--)
+         reverse = reverse + original.charAt(i);
+         
+      if (original.equals(reverse))
+         System.out.println("The string is a palindrome.");
+      else
+         System.out.println("The string isn't a palindrome.");
+         
+   }
   
 
     
@@ -141,7 +171,7 @@ public class Portfolio
     
      
      pen.up();
-     pen.move(-76, 133);
+     pen.move(-77, 130);
      pen.setDirection(0);
      pen.down();
      
