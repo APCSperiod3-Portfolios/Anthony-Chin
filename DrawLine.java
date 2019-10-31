@@ -86,11 +86,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 
                 Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("Which of these was Mozart's middle name?");
+                System.out.println("A Wolfgangus");
+                System.out.println("B Homer");
+                System.out.println("C Amadeus");
+                System.out.println("D Johannes");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -115,11 +115,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                 Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("On a clear night about how many galaxies are visible to the naked eye?");
+                System.out.println("A Two");
+                System.out.println("B Two Million");
+                System.out.println("C Five thousand");
+                System.out.println("D ninethousand");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -143,11 +143,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                    Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("How many muscles do you have in total in all your fingers combined?");
+                System.out.println("A 0");
+                System.out.println("B 22");
+                System.out.println("C 10");
+                System.out.println("D 20");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -171,11 +171,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                    Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("How many toes does a two toed sloth have?");
+                System.out.println("A 6 or 8");
+                System.out.println("B 2");
+                System.out.println("C 0");
+                System.out.println("D 10");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -199,13 +199,13 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                        Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("Which of the following characters are rabbits?");
+                System.out.println("A Bugs Bunny");
+                System.out.println("B Easter Bunny");
+                System.out.println("C Brer Rabbit");
+                System.out.println("D None they are all hares");
                 String answer = YEET.nextLine();
-                if (answer.equals("A")){
+                if (answer.equals("D")){
                     System.out.println("Correct");
                 }
                 else{
@@ -227,13 +227,13 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                    Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("How many man made artifacts on Earth can be seen from space?");
+                System.out.println("A 1");
+                System.out.println("B 0");
+                System.out.println("C 6");
+                System.out.println("D thousands");
                 String answer = YEET.nextLine();
-                if (answer.equals("A")){
+                if (answer.equals("D")){
                     System.out.println("Correct");
                 }
                 else{
@@ -255,11 +255,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                   //Write the code here  
                            Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("What was Billy the Kid's real first name?");
+                System.out.println("A Henry");
+                System.out.println("B William");
+                System.out.println("C Bill");
+                System.out.println("D Kidd");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -282,11 +282,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                    Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("What kind of animal is the longest in the world?");
+                System.out.println("A worm");
+                System.out.println("B snake");
+                System.out.println("C whale");
+                System.out.println("D jellyfish");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -310,11 +310,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                            Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("Why is a marathon race distance 26 miles and 385 yards?");
+                System.out.println("A For the Convience of the British royale family");
+                System.out.println("B No one knows");
+                System.out.println("C by accident");
+                System.out.println("D it's the distance from greece to athens");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -338,11 +338,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                            Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("Which eye did Lord Nelson wear his eye-patch on?");
+                System.out.println("A He never wore an eye-patch");
+                System.out.println("B His right");
+                System.out.println("C His left");
+                System.out.println("D It depended on his mood");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");
@@ -365,11 +365,11 @@ public class DrawLine extends JPanel implements ActionListener  {
                 //Write the code here  
                           Scanner YEET = new Scanner(System.in);
                 System.out.println('\u000C');
-                System.out.println("Question");
-                System.out.println("A");
-                System.out.println("B");
-                System.out.println("C");
-                System.out.println("D");
+                System.out.println("Which of these species are the most murderous mammals?");
+                System.out.println("A Chimpanzees");
+                System.out.println("B Meerkats");
+                System.out.println("C Elk");
+                System.out.println("D Dogs");
                 String answer = YEET.nextLine();
                 if (answer.equals("A")){
                     System.out.println("Correct");

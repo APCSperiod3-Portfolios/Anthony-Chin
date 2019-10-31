@@ -1,4 +1,4 @@
-
+ 
 import apcslib.*;
 import java.awt.Color;
 import java.io.Console;
@@ -84,7 +84,10 @@ public class Portfolio
                 System.out.println("The code doesn't work in portfolio use seperatley to run program.");
                 
             }
-        
+             if (answer==10){
+                F lol = new F();
+                lol.main();
+            }
         
         Scanner yolo = new Scanner (System.in);
         System.out.println("Type exit to exit");
@@ -96,6 +99,35 @@ public class Portfolio
     
 }
 
+    public void palindrome2(){
+        
+        String input = inputString(" Enter palindrome canidate..");
+        
+        int i = 0;
+        int j = input.length() - 1;
+        
+        while (i < j) {
+           char frontChar = input.charAt(i);
+           char endChar = input.charAt(j);
+           if(!(Character.isDigit(frontChar)
+           || Character.isLetter(frontChar))){
+             i++;
+            }
+            else if (!(Character.isDigit(endChar)
+            || Character.isLetter(endChar))){
+                j--;
+            }
+            else if (frontChar == endChar){
+                i++; j--;
+            }
+            else{
+                outputString("Not a Plaindrome");
+                return;
+        }
+        outputString("This is a Palindrome");
+    }
+    
+    }
     
     public void DrawOutline()
     { {
