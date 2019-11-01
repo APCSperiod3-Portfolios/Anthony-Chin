@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 import java.util.Scanner;
 
+
 public class Portfolio
 {
     // instance variables - replace the example below with your own
@@ -20,114 +21,90 @@ public class Portfolio
         // initialise instance variables
         errCode = 0;
     }
-    
-    public static void main(String [] args){
-        Scanner keyboard = new Scanner (System.in);
-        Portfolio runner = new Portfolio();
-        System.out.print('\u000C');
-        System.out.println("Hello welcome to Anthony's Portfolio!");
-        //System.out.println("What would you like to see first?");
-        
-        System.out.println("Type exit to exit");
-        System.out.println("Type continue to continue");
-        String exit= keyboard.nextLine();
-        
- 
-        while(exit.compareTo("exit") != 0){
-        System.out.println("What would you like to see");
-        System.out.println("Press 1 for House");
-        System.out.println("Press 2 for  a Question 1 about drawing Objects");
-        System.out.println("Press 3 for Benzene drawing");
-        System.out.println("Press 4 for Logo drawing");
-        System.out.println("Press 5 for Monkey Song");
-        System.out.println("Press 6 for Question 2 about drawing Object");
-        System.out.println("Press 7 for Palindrome");
-        System.out.println("Press 8 for Jeopardy");
-        System.out.println("Press 9 for Knight lab");
-            int answer = keyboard.nextInt();
-            if(answer==1){
+     private static int getMenu(){ //presents menu to user and prompts user to choose which project to see
+       int choice = 0;
+       Scanner keyboard = new Scanner(System.in);
+       Keyinput.printPrompt("What would you like to see\n");
+        Keyinput.printPrompt("Press 1 for House\n");
+        Keyinput.printPrompt("Press 2 for  a Question 1 about drawing Objects\n");
+        Keyinput.printPrompt("Press 3 for Benzene drawing\n");
+        Keyinput.printPrompt("Press 4 for Logo drawing\n");
+        Keyinput.printPrompt("Press 5 for Monkey Song\n");
+        Keyinput.printPrompt("Press 6 for Question 2 about drawing Object\n");
+        Keyinput.printPrompt("Press 7 for Palindrome\n");
+        Keyinput.printPrompt("Press 8 for Jeopardy\n");
+        Keyinput.printPrompt("Press 9 for Knight lab\n");
+        Keyinput.printPrompt("Press 10 for Calculator\n");
+        Keyinput.printPrompt("Press 11 for Palindrome Replace\n");
+        Keyinput.printPrompt("Press 12 for Palindrome recursion\n");
+       choice = keyboard.nextInt();
+       return choice;
+}
+   
+   public static void main(String [] args){
+       Scanner keyboard = new Scanner (System.in);
+       System.out.print('\u000C');
+       System.out.println("Hello welcome to Anthony's Portfolio!");
+       int choice = getMenu();
+       Portfolio runner = new Portfolio();
+       //System.out.println("Your choice is: "+choice);
+       while(choice != 0){
+    if(choice==1){
                 runner.DrawOutline();
             }
-            if(answer==2){
+            else if(choice==2){
                 runner.midtermQuestion();
         
             
             }
-            if (answer==3){
+            else if (choice==3){
                runner.drawBenzene ();
              
             }
-            if (answer==4){ 
+            else if (choice==4){ 
                 CreateLogo temp = new CreateLogo();
                 
                 temp.main();
             }
-            if (answer==5){
+            else if (choice==5){
                 runner.CountdownSong();
                 
             }
-            if (answer==6){
+            else if (choice==6){
                 runner.Question();
             }
-            if (answer==7){
+            else if (choice==7){
                 runner.palindrome();
             }
                
-            if (answer==8){
+            else if (choice==8){
                 DrawLine temp = new DrawLine();
                 temp.YOLO();
             }
-            if (answer==9){
+            else if (choice==9){
                 Knight hi = new Knight();
                 hi.printTour();
                 
-                System.out.println("The code doesn't work in portfolio use seperatley to run program.");
+                Keyinput.printPrompt("The code doesn't work in portfolio use seperatley to run program.");
                 
             }
-             if (answer==10){
+             else if (choice==10){
                 F lol = new F();
                 lol.main();
             }
-        
-        Scanner yolo = new Scanner (System.in);
-        System.out.println("Type exit to exit");
-        System.out.println("Type stay to stay");
-        exit = yolo.nextLine();
+            else if (choice==11){
+                PalindromeReplace yee = new PalindromeReplace();
+                yee.run();
+            }
+            else if (choice==12){
+                Palindrome_recursion hi = new Palindrome_recursion();
+                hi.main_Palindrome_recursionStatic();
+            }
+       choice = getMenu(); //allows you to rechose an option on the menu
 }
-  
-        
-    
 }
-
-    public void palindrome2(){
-        
-        String input = inputString(" Enter palindrome canidate..");
-        
-        int i = 0;
-        int j = input.length() - 1;
-        
-        while (i < j) {
-           char frontChar = input.charAt(i);
-           char endChar = input.charAt(j);
-           if(!(Character.isDigit(frontChar)
-           || Character.isLetter(frontChar))){
-             i++;
-            }
-            else if (!(Character.isDigit(endChar)
-            || Character.isLetter(endChar))){
-                j--;
-            }
-            else if (frontChar == endChar){
-                i++; j--;
-            }
-            else{
-                outputString("Not a Plaindrome");
-                return;
-        }
-        outputString("This is a Palindrome");
-    }
     
-    }
+    
     
     public void DrawOutline()
     { {
@@ -178,7 +155,7 @@ public class Portfolio
       String original, reverse = ""; // Objects of String class
       Scanner in = new Scanner(System.in);
      
-      System.out.println("Enter a string to check if it is a palindrome");
+      Keyinput.printPrompt("Enter a string to check if it is a palindrome");
       original = in.nextLine();
      
       int length = original.length();
@@ -187,9 +164,9 @@ public class Portfolio
          reverse = reverse + original.charAt(i);
          
       if (original.equals(reverse))
-         System.out.println("The string is a palindrome.");
+         Keyinput.printPrompt("The string is a palindrome.");
       else
-         System.out.println("The string isn't a palindrome.");
+         Keyinput.printPrompt("The string isn't a palindrome.");
          
    }
   
@@ -233,36 +210,36 @@ public class Portfolio
     public void midtermQuestion(){
         Scanner keyboard = new Scanner(System.in);
         System.out.println('\u000C');
-        System.out.println("What direction do you start in when drawing?");
-        System.out.println("up");
-        System.out.println("down");
-        System.out.println("right");
-        System.out.println("left");
+        Keyinput.printPrompt("What direction do you start in when drawing?");
+        Keyinput.printPrompt("up");
+        Keyinput.printPrompt("down");
+        Keyinput.printPrompt("right");
+        Keyinput.printPrompt("left");
         
         String answer = keyboard.nextLine();
         
         if(answer.equals("up")){
-            System.out.println("Correct!");
+            Keyinput.printPrompt("Correct!");
         
     }
     else{
-        System.out.println("Incorrect, Sorry");
+        Keyinput.printPrompt("Incorrect, Sorry");
     }
 }
     public void Question(){
         Scanner YEET = new Scanner(System.in);
         System.out.println('\u000C');
-        System.out.println("What do you use to draw a straight line?");
-        System.out.println("pen.turnRight()");
-        System.out.println("pen.turnLeft()");
-        System.out.println("pen.forward()");
-        System.out.println("pen.drawCircle()");
+        Keyinput.printPrompt("What do you use to draw a straight line?");
+        Keyinput.printPrompt("pen.turnRight()");
+        Keyinput.printPrompt("pen.turnLeft()");
+        Keyinput.printPrompt("pen.forward()");
+        Keyinput.printPrompt("pen.drawCircle()");
         String answer = YEET.nextLine();
         if (answer.equals("pen.forward()")){
-            System.out.println("Correct");
+            Keyinput.printPrompt("Correct");
         }
         else{
-            System.out.println("Incorrect!");
+            Keyinput.printPrompt("Incorrect!");
         }}
     
 
@@ -280,11 +257,11 @@ public void CountdownSong(){
         boolean stringchecker;
         
         // string of characters 
-        System.out.println("Enter your jumper:");
+        Keyinput.printPrompt("Enter your jumper:");
         bedJumpers = keyboard.nextLine();
     
         
-        System.out.println("\nEnter the number of jumpers:");
+        Keyinput.printPrompt("\nEnter the number of jumpers:");
         countdown = keyboard.nextLine();
         
 
@@ -295,14 +272,14 @@ public void CountdownSong(){
         while (i > -1) { // while is a control flow statement, observe blocks of code
 
             if(i == 0){
-                System.out.println("Zero little " + space+bedJumpers+" jumping on the bed");
+                Keyinput.printPrompt("Zero little " + space+bedJumpers+" jumping on the bed");
             }else{
              
                 // messages print each time through loop,  println prints a line to console, plus sign (i + space...) concatonates
-                System.out.println(i + space + "little" + space + bedJumpers + space + "jumping on the bed");
-                System.out.println("One fell off and broke his head");
-                System.out.println("Mama called the doctor and the doctor said");
-                System.out.println("no more "+ bedJumpers+ " jumping on the bed.");
+                Keyinput.printPrompt(i + space + "little" + space + bedJumpers + space + "jumping on the bed");
+                Keyinput.printPrompt("One fell off and broke his head");
+                Keyinput.printPrompt("Mama called the doctor and the doctor said");
+                Keyinput.printPrompt("no more "+ bedJumpers+ " jumping on the bed.");
                 
             
             }
